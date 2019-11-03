@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+        //monta a matriz
+        var linhas = Number(prompt('Quantas linhas? '));
+        var colunas = Number(prompt('Quantas colunas? '));
+        var matriz = []
+        var qtde = 0
+        var soma = 0
+        var par = 0
+        for (var i=0; i<linhas; i++){
+            matriz[i] = []
+            for(var j=0; j<colunas; j++){
+                matriz[i][j] = Number(prompt('Valor'))
+                soma += matriz[i][j]
+                if(matriz[i][j] == 1){
+                    qtde++;
+                }
+                if (matriz[i][j] % 2 == 0){
+                    par += matriz[i][j]
+                }
+            
+            }
+        }
+        alert(qtde)
+        alert(soma)
+        alert(par)
+        // calcula e mostra quantos 1 tem na matriz.
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+        //monta a matriz
+        var mes = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro']
+        var matriz = []    
+        for (var i=0; i<12; i++){
+            matriz[i] = []
+            for(var j=0; j<4; j++){
+                matriz[i][j] = Number(prompt('Informa valor'))
+            }
+        }
+        // calcula total vendido por mês
+        for (var i=0; i<12; i++){
+            var totalMes = 0
+            for(var j=0; j<4; j++){
+                totalMes += matriz[i][j];
+            }
+            alert(`Total vendido em ${mes[i]} é ${totalMes}`)
+        }
+        // calcula total vendido por semana
+        for(var j=0; j<4; j++){
+            var totalSemana = 0   
+            for (var i=0; i<12; i++){
+                totalSemana += matriz[i][j];
+                totalAno += matriz[i][j]
+            }
+            alert(`Total vendido no ano ${totalAno}`)
+        }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

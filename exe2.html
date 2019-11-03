@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+        //monta a matriz
+        var linhas = 2;
+        var colunas = 4;
+        var matriz = []    
+        var qtde = 0
+        var par = 0
+        var cont = 0
+        var media = 0
+        for (var i=0; i<linhas; i++){
+            matriz[i] = []
+            if(matriz[i] >=12 && matriz[i] <=20){
+                    qtde++;
+                }
+            for(var j=0; j<colunas; j++){
+                matriz[i][j] = Number(prompt('Valor'))
+                if (matriz[i][j] % 2 == 0){
+                    par += matriz[i][j];
+                    cont++;
+                }
+            }
+        }
+        media = par/cont
+        alert(qtde)
+        alert(media)
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

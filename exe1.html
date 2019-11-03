@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+        //monta a matriz
+        var linhas = 3;
+        var colunas = 5;
+        var matriz = []    
+        var qtde = 0
+        for (var i=0; i<linhas; i++){
+            matriz[i] = []
+            for(var j=0; j<colunas; j++){
+                matriz[i][j] = Number(prompt('Valor'))
+                if(matriz[i][j] >=15 && matriz[i][j] <=20){
+                    qtde++;
+                }
+            
+            }
+        }
+        alert(qtde)
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

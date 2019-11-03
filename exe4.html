@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+        //monta a matriz
+        var linhas = 4
+        var colunas = 3
+        var matriz = []
+        var nome = []
+        var media = 0
+        for (var i=0; i<linhas; i++){
+            nome.push(prompt('Informe o nome: '))
+            matriz[i] = []
+            for(var j=0; j<colunas; j++){
+                matriz[i][j] = Number(prompt('Qual a sua nota? ' +j));
+                media += matriz[i][j]
+            }
+        }
+        var soma 
+        for(var i=0; i<linhas; i++){
+            soma = 0
+            for(var j=0; j<colunas; j++){
+                soma += matriz[i][j]
+            }
+            if (soma / colunas >= 6){
+                alert(`Alunos ${vet[i]} foi aprovado com ${soma/colunas}`)
+            }
+            else if (soma / colunas >= 3){
+                alert(`Alunos ${vet[i]} em exame com ${soma/colunas}`)
+            }
+            else {
+                alert(`Alunos ${vet[i]} foi reprovado com ${soma/colunas.toFixed(2)}`)
+            }
+        }
+        alert(media / linhas * colunas)
+        // calcula e mostra quantos 1 tem na matriz.
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

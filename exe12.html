@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+        //monta a matriz
+        var alunos = []
+        var disc = []
+        var qtdeAlu = Number(prompt('Quantidade de alunos: '))
+        var qtdeDis = Number(prompt('Quantidade de disciplina: '))
+        
+        for (var i=0; i<qtdeAlu; i++){
+            var obj = {}
+            obj.codigo = Number(prompt('Informe codigo: '))
+            obj.idade = Number(prompt('Informe idade: '))
+            alunos.push(obj)
+        }
+
+        for (var i=0; i<qtdeDis; i++) {
+            disc.push(Number(prompt('Informe Codigo da disciplina: ')))
+        }
+        var provas = []
+        for (var i=0; i<qtdeAlu; i++){
+            provas[i] = []
+            for(var j=0; j<qtdeDis; j++){
+                provas[i][j] = Number(prompt('Quantidade de provas: '`${alunos[i].codigo} ${disc[j]}`));
+            }
+        }
+        //item 1
+        var qtde = 0
+        var discProc = Number(prompt('Informe o codigo da disciplina: '))
+        var posDisc = disc.indexOf(discProc)
+        if(posDisc == -1){
+            alert('Disciplina não existe')
+        }
+        else{
+            for(var i=0; i<qtdeAlu;i++){
+                if(provas[i][posDisc] > 2){
+                    if(alunos[i].idade >=18 && (alunos[i].idade<=25)){
+                        qtde++
+                    }
+                }
+            }
+            alert(`Resposta do item 1 ${qtde}`)
+        }
+
+        var discProc = Number(prompt('Informe o codigo da disciplina: '))
+        var posDisc = disc.indexOf(discProc)
+        if(posDisc == -1){
+            alert('Disciplina não existe')
+        }
+        else{
+            var resp = []
+            for(var i=0; i<qtdeAlu;i++){
+                if(provas[i][posDisc] < 3){
+                    resp.push(alunos[i].codigo)
+                }
+            }
+            alert(resp)
+        }
+
+
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
